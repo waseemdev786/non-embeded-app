@@ -29,9 +29,9 @@ export default function App() {
       <div css={{ marginInline: 'auto' }}>
         <div css={{ display: "grid", gridTemplateColumns: "300px 1fr", height: "100vh", overflow: "hidden" }}>
           <Sidebar />
-          <div css={{backgroundColor: "#f5faff", overflow:"auto", scrollbarWidth:"thin"}}>
+          <div css={{ backgroundColor: "#f5faff", overflow: "auto", scrollbarWidth: "thin" }}>
             <Topbar />
-            <main css={{ overflow:"hidden", padding:"24px"}}>
+            <main css={{ overflow: "hidden", padding: "24px" }}>
               <Outlet />
             </main>
           </div>

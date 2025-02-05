@@ -11,7 +11,7 @@ import { authenticate } from "../shopify.server";
 
 export const loader = async ({ request }) => {
     try {
-        const { session, admin} = await authenticate.admin(request);
+        const { session, admin } = await authenticate.admin(request);
 
         const allOrders = await admin.graphql(`#graphql
             query {
@@ -26,8 +26,8 @@ export const loader = async ({ request }) => {
         }`);
 
         const { data } = await allOrders.json();
-       return ({data, session});
-        
+        return ({ data, session });
+
     } catch (error) {
         console.log(error);
         return null;
@@ -40,7 +40,7 @@ export default function Orders() {
     const loaderData = useLoaderData();
 
     console.log(loaderData);
-    
+
 
     return (
         <div css={styles.container}>
