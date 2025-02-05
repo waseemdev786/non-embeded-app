@@ -63,9 +63,9 @@ const style = {
     selectBoxBtn: {
         padding: "8px 24px",
         borderRadius: "8px",
-        backgroundColor: "white",
-        color: "black",
-        border: "1px solid black",
+        backgroundColor: "var(--gray-color-shade-1)",
+        color: "var(--black-color-shade-2)",
+        border: "2px solid var(--blue-color-shade-6)",
         outline: "none",
         cursor: "pointer",
         height: "100%",
@@ -74,14 +74,14 @@ const style = {
         justifyContent: "space-between",
         gap: "8px",
         "&:hover": {
-            backgroundColor: "#f1f1f1",
+            backgroundColor: "var(--blue-color-shade-1)",
         },
     },
     selectBoxBtnSlim: {
         padding: "4px 12px !important",
     },
     label: {
-        color: "gray",
+        color: "var(--blue-color-shade-6)",
         fontSize: "14px",
         fontWeight: "normal",
     },
@@ -92,7 +92,7 @@ const style = {
         "& > svg": {
             width: "20px",
             height: "20px",
-            fill: "black",
+            fill: "var(--black-color-shade-2)",
         },
     },
     popup: {
@@ -105,20 +105,21 @@ const style = {
         flexDirection: "column",
         gap: "8px",
         padding: "8px",
-        backgroundColor: "white",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        backgroundColor: "var(--gray-color-shade-1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
         borderRadius: "8px",
         zIndex: "1",
     },
     selectBtn: {
         border: "none",
         backgroundColor: "transparent",
-        color: "black",
+        color: "var(--black-color-shade-2)",
         cursor: "pointer",
         padding: "8px 16px",
         borderRadius: "8px",
+        transition: "background-color var(--transition-speed)",
         "&:hover": {
-            backgroundColor: "#f1f1f1",
+            backgroundColor: "var(--blue-color-shade-1)",
         },
     },
     selectBtnSlim: {
@@ -126,8 +127,8 @@ const style = {
     },
     selectedBtn: {
         border: "none",
-        backgroundColor: "#f1f1f1",
-        color: "black",
+        backgroundColor: "var(--blue-color-shade-6)",
+        color: "var(--gray-color-shade-1)",
         cursor: "default",
         padding: "8px 16px",
         borderRadius: "8px",

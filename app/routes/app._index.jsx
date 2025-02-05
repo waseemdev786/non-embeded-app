@@ -21,7 +21,7 @@ export default function AppIndex() {
     height="230px"
     data={guaranteeConversionData}
     options={{
-      colors: ["#6e71ff"],
+      colors: ["#269fcf"],
       curveType: "function",
       legend: "none",
       hAxis: {
@@ -50,7 +50,7 @@ export default function AppIndex() {
     height="230px"
     data={RevenueVsIssueData}
     options={{
-      colors: ["#6e71ff", "black"],
+      colors: ["#269fcf", "#5ca490"],
       curveType: "function",
       legend: { position: "bottom" },
       hAxis: {
@@ -242,14 +242,14 @@ const styles = {
     display: "grid",
     padding: "16px",
     borderRadius: "16px",
-    backgroundColor: "rgb(255, 255, 255)",
-    boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+    backgroundColor: "var(--gray-color-shade-1)",
+    boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
     gap: "16px",
   },
   chartTitle: {
     fontSize: "16px",
     fontWeight: "normal",
-    color: "#6e71ff",
+    color: "var(--blue-color-shade-6)",
   },
   chartContent: { overflow: "hidden" },
   cardGrid: {
@@ -265,8 +265,8 @@ const styles = {
     justifyContent: "space-between",
     padding: "16px",
     borderRadius: "16px",
-    backgroundColor: "rgb(255, 255, 255)",
-    boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+    backgroundColor: "var(--gray-color-shade-1)",
+    boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
     gap: "16px",
   },
   cardContent: {
@@ -278,19 +278,21 @@ const styles = {
   cardTitle: {
     fontSize: "16px",
     fontWeight: "normal",
-    color: "rgb(19, 19, 19)",
+    color: "var(--black-color-shade-2)",
   },
   cardValue: {
     fontSize: "40px",
-    color: "#6e71ff",
+    color: "var(--blue-color-shade-6)",
   },
   cardLink: {
     fontSize: "16px",
     fontWeight: "normal",
-    color: "rgb(19, 19, 19)",
+    color: "var(--black-color-shade-2)",
+    transition: "color var(--transition-speed)",
     textDecoration: "none",
     "&:hover": {
       textDecoration: "underline",
+      color: "var(--blue-color-shade-6)",
     },
   },
   cardIcon: {
@@ -298,14 +300,14 @@ const styles = {
     height: "60px",
     padding: "16px",
     borderRadius: "8px",
-    backgroundColor: "#6e71ff",
+    backgroundColor: "var(--blue-color-shade-6)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     "& > svg": {
       width: "30px",
       height: "30px",
-      fill: "white",
+      fill: "var(--gray-color-shade-1)",
     },
   },
 };

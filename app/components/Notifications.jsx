@@ -54,9 +54,9 @@ const styles = {
         flexDirection: "column",
         gap: "16px",
         borderRadius: "16px",
-        backgroundColor: "white",
+        backgroundColor: "var(--gray-color-shade-1)",
         padding: "24px",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
         "& > div": {
             display: "flex",
             alignItems: "center",
@@ -69,13 +69,11 @@ const styles = {
         }
     },
     unsubscribeBtn: {
-        backgroundColor: "#ff4e51",
-        border: "2px solid #ff4e51",
-        color: "white",
         marginTop: "24px",
+        transition: "background-color var(--transition-speed), border-color var(--transition-speed)",
         "&:hover": {
-            backgroundColor: "#ff1a1c",
-            borderColor: "#ff1a1c",
+            backgroundColor: "var(--blue-color-shade-5)",
+            borderColor: "var(--blue-color-shade-5)",
         }
     }
 };

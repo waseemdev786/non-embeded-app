@@ -6,14 +6,14 @@ export default function Sidebar() {
   const location = useLocation();
   const [selected, setSelected] = useState(0);
 
-  const tabsArray =  useMemo(()=>[
+  const tabsArray = useMemo(() => [
     { title: 'Dashboard', path: '/app', icon: DashboardIcon },
     { title: 'Orders', path: '/app/orders', icon: OrdersIcon },
     { title: 'Issues', path: '/app/issues', icon: IssuesIcon },
     { title: 'Settings', path: '/app/settings', icon: SettingsIcon },
     { title: 'Billing', path: '/app/billing', icon: BillingIcon },
-  ],[]);
-  
+  ], []);
+
 
   useEffect(() => {
     if (location?.pathname) {
@@ -34,9 +34,9 @@ export default function Sidebar() {
         <div css={styles.mainMenu}>
           <div css={styles.logoWrapper}>
             <div css={styles.logoBox}>
-              <img src="/images/logo.png" alt="logo" css={styles.logoImage} />
+              <img src="/images/primary-logo.png" alt="logo" css={styles.logoImage} />
             </div>
-            <h1 css={styles.logoText}>Logo Here</h1>
+            <h1 css={styles.logoText}><small>Complete Order</small><br/>Protection</h1>
           </div>
           <ul css={styles.tabsList}>
             {tabsArray.map((tab, index) => (
@@ -65,9 +65,10 @@ export default function Sidebar() {
 
 const styles = {
   aside: {
-    backgroundColor: "#ffffff",
+    backgroundColor: "var(--gray-color-shade-1)",
     overflow: "auto",
     scrollbarWidth: "thin",
+    boxShadow: "0px 0px 8px var(--blue-color-shade-2)",
   },
   container: {
     display: "flex",
@@ -89,9 +90,6 @@ const styles = {
     padding: "0 24px 24px 24px",
     "& > *": {
       fontSize: "14px",
-      color: "rgb(19, 19, 19)",
-      textDecoration: "none",
-
     }
   },
   logoWrapper: {
@@ -103,11 +101,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: "70px",
-    height: "70px",
-    padding: "8px",
-    backgroundColor: "rgb(19, 19, 19)",
-    borderRadius: "16px",
+    maxWidth: "80px",
+    minWidth: "80px",
+    height: "80px",
+    borderRadius: "15px",
     overflow: "hidden",
   },
   logoImage: {
@@ -117,7 +114,6 @@ const styles = {
   logoText: {
     fontSize: "24px",
     fontWeight: "bold",
-    color: "rgb(19, 19, 19)",
   },
   tabsList: {
     listStyle: "none",
@@ -139,11 +135,11 @@ const styles = {
     padding: "20px",
     borderRadius: "12px",
     cursor: "pointer",
-    textDecoration: "none",
-    backgroundColor: selected === index ? "rgb(19, 19, 19)" : "transparent",
-    color: selected === index ? "rgb(255, 255, 255)" : "rgb(19, 19, 19)",
+    textDecoration: "none !important",
+    backgroundColor: selected === index ? "var(--black-color-shade-2)" : "transparent",
+    color: selected === index ? "var(--gray-color-shade-1) !important" : "" ,
     ":hover": {
-      backgroundColor: selected === index ? "rgb(19, 19, 19)" : "rgb(219, 219, 219)",
+      backgroundColor: selected === index ? "" : "var(--gray-color-shade-2)",
     },
   }),
   iconWrapper: {

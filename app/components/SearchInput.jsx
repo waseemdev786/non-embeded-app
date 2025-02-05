@@ -38,23 +38,25 @@ const styles = {
         "& > svg": {
             width: "25px",
             height: "25px",
-            fill: "rgb(219, 219, 219)",
+            fill: "var(--gray-color-shade-3)",
         },
     },
     input: {
         gridArea: "1/1",
-        padding: "6px 16px 6px 32px",
+        padding: "8px 16px 8px 32px",
         borderRadius: "32px",
-        border: "1px solid rgb(219, 219, 219)",
+        border: "2px solid var(--gray-color-shade-3)",
         outline: "none",
         minWidth: "300px",
+        transition: "border-color var(--transition-speed)",
+        color: "var(--black-color-shade-2)",
         "&::placeholder": {
-            color: "gray",
+            color: "var(--gray-color-shade-3)",
             fontSize: "14px",
             fontWeight: "normal",
         },
         "&:focus": {
-            border: "1px solid rgb(19, 19, 19)",
+            borderColor: "var(--black-color-shade-2)",
         }
     }
 

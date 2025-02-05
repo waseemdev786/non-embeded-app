@@ -51,7 +51,7 @@ const styles = {
         display: "Grid",
         gridTemplateColumns: "repeat(4, 1fr)",
         alignItems: "center",
-        backgroundColor: "rgb(19, 19, 19)",
+        backgroundColor: "var(--blue-green-color-shade-3)",
         padding: "8px",
         gap: "8px",
         borderRadius: "60px",
@@ -62,13 +62,14 @@ const styles = {
         borderRadius: "30px",
         background: "transparent",
         cursor: "pointer",
-        color: "white",
+        color: "var(--gray-color-shade-1)",
+        transition: "background-color var(--transition-speed), color var(--transition-speed)",
         "&:hover": {
-            background: "rgb(56, 56, 56)",
+            background: "var(--blue-green-color-shade-2)",
         },
     },
     activeBtn: {
-        background: "white !important",
-        color: "rgb(19, 19, 19) !important",
+        color: "var(--blue-green-color-shade-3) !important",
+        backgroundColor: "var(--blue-green-color-shade-1) !important",
     }
 }

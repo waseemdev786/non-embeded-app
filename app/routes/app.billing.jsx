@@ -87,8 +87,8 @@ const styles = {
         justifyContent: "space-between",
         padding: "24px",
         borderRadius: "16px",
-        backgroundColor: "rgb(255, 255, 255)",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        backgroundColor: "var(--gray-color-shade-1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
     },
     cardContent: {
         display: "flex",
@@ -97,25 +97,25 @@ const styles = {
         "& > h3": {
             fontSize: "16px",
             fontWeight: "normal",
-            color: "rgb(19, 19, 19)",
+            color: "var(--black-color-shade-2)",
             marginBottom: "8px",
         },
         "& > span": {
             fontSize: "12px",
-            color: "gray",
+            color: "var(--black-color-shade-1)",
             marginBottom: "20px",
         },
         "& > strong": {
             display: "inline-flex",
             fontSize: "40px",
-            color: "#6e71ff",
+            color: "var(--blue-color-shade-6)",
         }
     },
     primaryCard: {
-        backgroundColor: "#6e71ff",
-        color: "white",
+        backgroundColor: "var(--blue-color-shade-6)",
+        color: "var(--gray-color-shade-1)",
         "&  * ": {
-            color: "white !important",
+            color: "var(--gray-color-shade-1) !important",
         },
     },
     cardIcon: {
@@ -123,24 +123,24 @@ const styles = {
         height: "60px",
         padding: "16px",
         borderRadius: "8px",
-        backgroundColor: "#6e71ff",
+        backgroundColor: "var(--blue-color-shade-6)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        border: "1px solid #6e71ff",
+        border: "1px solid var(--blue-color-shade-6)",
         "& > svg": {
             width: "30px",
             height: "30px",
-            fill: "white",
+            fill: "var(--gray-color-shade-1)",
         },
     },
     primaryIcon: {
-        border: "1px solid white",
+        border: "1px solid var(--gray-color-shade-1)",
     },
     tableCard: {
-        backgroundColor: "white",
+        backgroundColor: "var(--gray-color-shade-1)",
         borderRadius: "16px",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
     },
     tableHeader: {
         padding: "16px",

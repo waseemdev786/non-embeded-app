@@ -130,9 +130,9 @@ const styles = {
     headerTitle: { fontSize: "24px", fontWeight: "bold" },
     headerControls: { display: "flex", gap: "16px" },
     tableCard: {
-        backgroundColor: "white",
+        backgroundColor: "var(--gray-color-shade-1)",
         borderRadius: "16px",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
     },
     tableHeader: {
         padding: "16px",

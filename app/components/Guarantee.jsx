@@ -4,7 +4,7 @@ import SelectBox from "./SelectBox";
 import { primaryButtonStyle } from "../emotionStyled/common";
 
 export default function Guarantee() {
-    
+
     const [showOnCart, setShowOnCart] = useState(false);
     const [autoOptIn, setAutoOptIn] = useState(false);
     const [reorderDiscount, setReorderDiscount] = useState(false);
@@ -122,7 +122,7 @@ export default function Guarantee() {
                         </div>
                         <textarea onChange={(e) => setExcludedCustomersTags(e.target.value)} value={excludedCustomersTags}></textarea>
                     </div>
-                    <button css={primaryButtonStyle}>update</button>
+                    <button css={[primaryButtonStyle, styles.updateBtn]}>update</button>
                 </div>
             </div>
         </section>
@@ -134,7 +134,7 @@ const commonCardStyles = {
     flexDirection: "column",
     gap: "16px",
     borderRadius: "16px",
-    boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+    boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
 };
 
 const headingStyles = {
@@ -154,7 +154,7 @@ const styles = {
         "& > h3": headingStyles,
         "& > p": {
             fontSize: "14px",
-            color: "rgb(56, 56, 56)",
+            color: "var(--black-color-shade-1)",
         },
     },
     cardsGrid: {
@@ -168,14 +168,12 @@ const styles = {
     },
     card: commonCardStyles,
     secondaryCard: {
-        ...commonCardStyles,
-        backgroundColor: "rgb(255, 255, 255)",
-        color: "rgb(19, 19, 19)",
+        backgroundColor: "var(--gray-color-shade-1)",
+        color: "var(--black-color-shade-2)",
     },
     primaryCard: {
-        ...commonCardStyles,
-        backgroundColor: "#6e71ff",
-        color: "white",
+        backgroundColor: "var(--blue-color-shade-6)",
+        color: "var(--gray-color-shade-1)",
     },
     header: {
         display: "flex",
@@ -215,7 +213,7 @@ const styles = {
         },
     },
     footer: {
-        borderTop: "1px solid #f5faff",
+        borderTop: "1px solid var(--blue-color-shade-1)",
         padding: "24px",
         "& button": {
             fontSize: "14px",
@@ -228,14 +226,14 @@ const styles = {
         },
     },
     secondaryBtn: {
-        color: "#6e71ff",
+        color: "var(--blue-color-shade-6)",
     },
     primaryBtn: {
-        color: "white",
+        color: "var(--gray-color-shade-1)",
     },
     regularCard: {
         ...commonCardStyles,
-        backgroundColor: "white",
+        backgroundColor: "var(--gray-color-shade-1)",
         padding: "24px",
     },
     flex: {
@@ -251,12 +249,15 @@ const styles = {
     currencyFlex: {
         display: "flex",
         alignItems: "center",
+        "& h6": {
+            fontSize: "16px",
+        },
         "& > div": {
             flexGrow: "1",
             maxWidth: "280px",
             "& > p": {
                 fontSize: "12px",
-                color: "gray",
+                color: "var(--black-color-shade-1)",
             }
         },
         "& > span": {
@@ -265,16 +266,19 @@ const styles = {
             gap: "8px",
             padding: "8px",
             borderRadius: "8px",
-            border: "1px solid #f1f1f1"
+            border: "1px solid var(--gray-color-shade-3)"
         }
     },
     textAreaWrap: {
         "& > div": {
             marginBottom: "8px",
+            "& h6": {
+                fontSize: "16px",
+            },
         },
         "& > div p": {
             fontSize: "12px",
-            color: "gray",
+            color: "var(--black-color-shade-1)",
         },
         "& > textarea": {
             maxWidth: "700px",
@@ -282,10 +286,18 @@ const styles = {
             height: "100px",
             padding: "8px",
             borderRadius: "8px",
-            border: "1px solid #f1f1f1",
+            border: "1px solid var(--gray-color-shade-3)",
             resize: "none"
         },
 
+    },
+    updateBtn: {
+        maxWidth: "700px",
+        transition: "background-color var(--transition-speed), border-color var(--transition-speed)",
+        "&:hover": {
+            backgroundColor: "var(--blue-color-shade-5)",
+            borderColor: "var(--blue-color-shade-5)",
+        }
     }
 
 };

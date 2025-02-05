@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
-import {MenuVerticalIcon } from '@shopify/polaris-icons';
-import { primaryButtonStyle, primaryCircleButtonStyle, secondaryButtonStyle } from "../emotionStyled/common";
+import { MenuVerticalIcon } from '@shopify/polaris-icons';
+import { primaryButtonStyle, primaryCircleButtonStyle, secondaryButtonStyle, secondaryCircleButtonStyle } from "../emotionStyled/common";
 
 export default function Topbar() {
     return (
@@ -17,28 +17,22 @@ export default function Topbar() {
                 to="/app"
                 css={primaryCircleButtonStyle}
             >AK</Link>
-            <button css={style.menuBtn}><MenuVerticalIcon /></button>
+            <button css={secondaryCircleButtonStyle}><MenuVerticalIcon /></button>
         </header>
     )
 }
 
 const style = {
     header: {
-        display: "flex",
+        display: "grid",
+        gridTemplateColumns: "repeat(2, minmax(100px, 250px)) auto auto",
         justifyContent: "end",
         alignItems: "center",
         gap: "16px",
         padding: "16px 24px",
-        backgroundColor: "rgb(19, 19, 19)"
-    },
-    menuBtn:{
-        backgroundColor: "transparent",
-        border: "none",
-        cursor: "pointer",
-        "& > svg": {
-            width: "24px",
-            height: "24px",
-            fill: "white",
+        backgroundColor: "var(--black-color-shade-2)",
+        "& svg": {
+            fill: "var(--gray-color-shade-1)",
         }
     }
 }

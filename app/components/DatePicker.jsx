@@ -85,19 +85,20 @@ const style = {
     datePickerBtn: {
         padding: "8px 24px",
         borderRadius: "8px",
-        backgroundColor: "#6e71ff",
+        backgroundColor: "var(--blue-color-shade-6)",
         color: "white",
-        border: "1px solid  #6e71ff",
+        border: "2px solid var(--blue-color-shade-6)",
         outline: "none",
         cursor: "pointer",
         height: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        transition: "background-color var(--transition-speed), border-color var(--transition-speed)",
         gap: "8px",
         "&:hover": {
-            backgroundColor: "#4a4aff",
-            borderColor: "#4a4aff",
+            backgroundColor: "var(--blue-color-shade-5)",
+            borderColor: "var(--blue-color-shade-5)",
         }
     },
     iconWarp: {
@@ -107,7 +108,7 @@ const style = {
         "& > svg": {
             width: "20px",
             height: "20px",
-            fill: "white",
+            fill: "var(--gray-color-shade-1)",
         }
     },
     popup: {
@@ -121,7 +122,7 @@ const style = {
         gap: "16px",
         padding: "8px",
         backgroundColor: "white",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
         borderRadius: "8px",
         zIndex: "1",
     },
@@ -131,12 +132,12 @@ const style = {
         gap: "8px",
     },
     label: {
-        color: "#6e71ff",
+        color: "var(--blue-color-shade-6)",
         fontSize: "16px",
         fontWeight: "normal",
     },
     dateInput: {
-        border: "1px solid rgb(19, 19, 19)",
+        border: "1px solid var(--black-color-shade-2)",
         padding: "8px 16px",
         borderRadius: "8px",
     },
@@ -155,19 +156,20 @@ const style = {
         }
     },
     cancelBtn: {
-        backgroundColor: "rgb(219, 219, 219)",
+        backgroundColor: "var(--gray-color-shade-1)",
         color: "black",
         border: "none",
         "&:hover": {
-            backgroundColor: "rgb(200, 200, 200)",
+            backgroundColor: "var(--gray-color-shade-2)",
         }
     },
     submitBtn: {
-        backgroundColor: "#6e71ff",
+        backgroundColor: "var(--blue-green-color-shade-2)",
         color: "white",
         border: "none",
+        transition: "background-color var(--transition-speed)",
         "&:hover": {
-            backgroundColor: "#4a4aff",
+            backgroundColor: "var(--blue-green-color-shade-3)",
         }
     }
 }

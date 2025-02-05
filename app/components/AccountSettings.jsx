@@ -13,7 +13,7 @@ export default function AccountSettings() {
                         <h4>Upload your profile picture</h4>
                         <p>This makes it easier for your teammates<br />to recognize you</p>
                     </div>
-                    <button css={primaryButtonStyle}>Upload Image</button>
+                    <button css={[primaryButtonStyle, styles.uploadBtn]}>Upload Image</button>
                 </div>
                 <hr />
                 <div css={styles.flexColumn}>
@@ -39,14 +39,14 @@ export default function AccountSettings() {
                             <span>Login</span>
                             <h4>Password</h4>
                         </div>
-                        <button css={secondaryButtonStyle}>Update Password</button>
+                        <button css={[secondaryButtonStyle, styles.updatePasswordBtn]}>Update Password</button>
                     </div>
                     <div css={styles.signoutSection}>
                         <div>
                             <h4>Sign out from all devices</h4>
                             <p>Logged in on a shared device but forgot to sign out? End all sessions by signing out from all devices</p>
                         </div>
-                        <button css={secondaryButtonStyle}>Sign out from all your devices</button>
+                        <button css={[primaryButtonStyle, styles.signoutBtn]}>Sign out from all your devices</button>
                     </div>
                 </div>
             </div>
@@ -54,7 +54,7 @@ export default function AccountSettings() {
                 <div css={styles.deleteAccountSection}>
                     <h4>Delete your account</h4>
                     <p>By deleting your account, you will no longer be able to access any of your orders or claims</p>
-                    <button css={[primaryButtonStyle, styles.unsubscribeBtn]}>Delete your account</button>
+                    <button css={[secondaryButtonStyle, styles.unsubscribeBtn]}>Delete your account</button>
                 </div>
             </div>
         </section>
@@ -76,9 +76,9 @@ const styles = {
         marginTop: "24px",
         borderRadius: "16px",
         backgroundColor: "white",
-        boxShadow: "0px 4px 8px rgba(110, 113, 255, 0.1)",
+        boxShadow: "0px 4px 8px var(--blue-color-shade-2)",
         "& > hr": {
-            border: "1px solid #f5faff",
+            border: "1px solid var(--blue-color-shade-1)",
         },
         "& > div": {
             padding: "24px",
@@ -97,7 +97,7 @@ const styles = {
                 marginBottom: "10px",
             },
             "& > p": {
-                color: "gray",
+                color: "var(--black-color-shade-1)",
             }
         }
     },
@@ -106,11 +106,18 @@ const styles = {
         height: "100px",
         fontSize: "36px",
         borderRadius: "100%",
-        backgroundColor: "#6e71ff",
-        color: "white",
+        backgroundColor: "var(--blue-green-color-shade-3)",
+        color: "var(--gray-color-shade-1)",
         display: "inline-flex",
         justifyContent: "center",
         alignItems: "center",
+    },
+    uploadBtn: {
+        transition: "background-color var(--transition-speed), border-color var(--transition-speed)",
+        "&:hover": {
+            backgroundColor: "var(--blue-color-shade-5)",
+            borderColor: "var(--blue-color-shade-5)",
+        }
     },
     flexColumn: {
         display: "flex",
@@ -123,7 +130,7 @@ const styles = {
         alignItems: "center",
         "& > div": {
             "& > span": {
-                color: "gray",
+                color: "var(--black-color-shade-1)",
                 display: "inline-flex",
                 marginBottom: "8px"
             },
@@ -133,10 +140,26 @@ const styles = {
             }
         }
     },
+    updatePasswordBtn: {
+        color: "var(--blue-color-shade-6)",
+        border: "2px solid var(--blue-color-shade-6)",
+        transition: "background-color var(--transition-speed), color var(--transition-speed)",
+        "&:hover": {
+            backgroundColor: "var(--blue-color-shade-6)",
+            color: "var(--gray-color-shade-1) ",
+        }
+    },
+    signoutBtn: {
+        transition: "background-color var(--transition-speed), border-color var(--transition-speed)",
+        "&:hover": {
+            backgroundColor: "var(--blue-color-shade-5)",
+            borderColor: "var(--blue-color-shade-5)",
+        }
+    },
     signoutSection: {
         "& > div": {
             "& > p": {
-                color: "gray",
+                color: "var(--black-color-shade-1)",
                 display: "inline-flex",
                 marginBottom: "24px"
             },
@@ -158,19 +181,19 @@ const styles = {
             marginBottom: "8px"
         },
         "& > p": {
-            color: "gray",
+            color: "var(--black-color-shade-1)",
             display: "inline-flex",
             marginBottom: "24px"
         }
     },
 
     unsubscribeBtn: {
-        backgroundColor: "#ff4e51",
-        border: "2px solid #ff4e51",
-        color: "white",
+        color: "var(--blue-color-shade-6)",
+        border: "2px solid var(--blue-color-shade-6)",
+        transition: "background-color var(--transition-speed), color var(--transition-speed)",
         "&:hover": {
-            backgroundColor: "#ff1a1c",
-            borderColor: "#ff1a1c",
+            backgroundColor: "var(--blue-color-shade-6)",
+            color: "var(--gray-color-shade-1) ",
         }
     }
 };

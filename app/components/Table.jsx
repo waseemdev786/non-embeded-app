@@ -132,7 +132,7 @@ const styles = {
         "& th": {
             padding: "6px 16px",
             fontWeight: "normal",
-            borderBottom: "2px dashed #f5faff",
+            borderBottom: "2px dashed var(--blue-color-shade-2)",
             textAlign: "left",
         },
         "& td": {
@@ -140,7 +140,7 @@ const styles = {
             textAlign: "left",
         },
         "& tbody tr:nth-of-type(even)": {
-            backgroundColor: "#f5faff",
+            backgroundColor: "var(--blue-color-shade-1)",
         },
         "& tbody button": {
             display: "flex",
@@ -151,13 +151,14 @@ const styles = {
             padding: "4px",
             borderRadius: "50%",
             cursor: "pointer",
+            transition: "background-color var(--transition-speed)",
             "& > svg": {
                 width: "20px",
                 height: "20px",
-                fill: " #6e71ff",
+                fill: "var(--blue-color-shade-6)",
             },
             "&:hover": {
-                background: "#f1f1f1",
+                background: "var(--blue-color-shade-2)",
             },
         }
     },
@@ -180,7 +181,7 @@ const styles = {
         background: "transparent",
         border: "none",
         cursor: "pointer",
-        color: "#6e71ff",
+        color: "var(--blue-color-shade-6)",
         "&:hover": {
             textDecoration: "underline",
         },
@@ -189,24 +190,26 @@ const styles = {
         background: "transparent",
         border: "none",
         cursor: "default",
-        color: "#f5f5f5",
+        color: "var(--blue-color-shade-2)",
     },
     pageButton: {
         padding: "8px 16px",
-        border: "1px solid #ddd",
+        color: "var(--black-color-shade-2)",
+        border: "1px solid var(--blue-color-shade-2)",
         borderRadius: "4px",
-        background: "white",
+        background: "var(--gray-color-shade-1)",
+        transition: "background-color var(--transition-speed)",
         cursor: "pointer",
         "&:hover": {
-            background: "#f5f5f5",
+            background: "var(--blue-color-shade-1)",
         },
     },
     activePageButton: {
         padding: "8px 16px",
-        border: "1px solid #ddd",
+        border: "1px solid var(--blue-color-shade-6)",
         borderRadius: "4px",
-        background: "#6e71ff",
-        color: "white",
+        background: "var(--blue-color-shade-6)",
+        color: "var(--gray-color-shade-1)",
         fontWeight: "bold",
     },
 };

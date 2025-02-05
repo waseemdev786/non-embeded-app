@@ -30,11 +30,11 @@ const styles = {
         transition: "background-color 0.3s ease",
     },
     toggleOn: {
-        backgroundColor: "#6e71ff",
+        backgroundColor: "var(--blue-color-shade-6)",
         justifyContent: "flex-end",
     },
     toggleOff: {
-        backgroundColor: "#ccc",
+        backgroundColor: "var(--gray-color-shade-3)",
         justifyContent: "flex-start",
     },
     toggleCircle: {

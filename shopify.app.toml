@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "07fec3725cc11e2320aa663f86b403cf"
-application_url = "https://conversation-designation-vacuum-bridal.trycloudflare.com"
+application_url = "https://intervals-wholesale-ui-traditional.trycloudflare.com"
 embedded = false
 name = "non-embeded-app"
 handle = "non-embeded-app"
@@ -23,9 +23,9 @@ scopes = "write_products, read_orders"
 
 [auth]
 redirect_urls = [
-  "https://conversation-designation-vacuum-bridal.trycloudflare.com/auth/callback",
-  "https://conversation-designation-vacuum-bridal.trycloudflare.com/auth/shopify/callback",
-  "https://conversation-designation-vacuum-bridal.trycloudflare.com/api/auth/callback"
+  "https://intervals-wholesale-ui-traditional.trycloudflare.com/auth/callback",
+  "https://intervals-wholesale-ui-traditional.trycloudflare.com/auth/shopify/callback",
+  "https://intervals-wholesale-ui-traditional.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
@@ -37,6 +37,6 @@ automatically_update_urls_on_dev = true
 include_config_on_deploy = true
 
 [app_proxy]
-url = "https://conversation-designation-vacuum-bridal.trycloudflare.com/api/proxy/liquid"
+url = "https://intervals-wholesale-ui-traditional.trycloudflare.com/api/proxy/liquid"
 subpath = "non-embeded-app"
 prefix = "apps"
